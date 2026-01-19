@@ -232,6 +232,105 @@ button {
 }
 
 /* ===================================
+   DROPDOWN MENU
+   =================================== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-gray-700);
+    font-weight: 500;
+    padding: var(--spacing-sm) 0;
+    transition: color var(--transition-fast);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.dropdown-toggle:hover {
+    color: var(--color-primary);
+}
+
+.dropdown-icon {
+    transition: transform var(--transition-fast);
+}
+
+.dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding-left: var(--spacing-lg);
+    margin-top: var(--spacing-sm);
+}
+
+.dropdown.active .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-link {
+    color: var(--color-gray-600);
+    font-weight: 400;
+    padding: var(--spacing-xs) 0;
+    transition: color var(--transition-fast);
+    display: block;
+}
+
+.dropdown-link:hover {
+    color: var(--color-primary);
+}
+
+/* Desktop dropdown styles */
+@media (min-width: 768px) {
+    .dropdown-toggle {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: var(--color-white);
+        box-shadow: var(--shadow-lg);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-sm);
+        margin-top: var(--spacing-xs);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all var(--transition-fast);
+        z-index: 100;
+    }
+    
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .dropdown-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+    }
+    
+    .dropdown-link:hover {
+        background: var(--color-gray-50);
+    }
+}
+
+
+/* ===================================
    PAGE MANAGEMENT
    =================================== */
 .page {

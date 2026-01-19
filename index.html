@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nome azienda - Esperti in ristrutturazioni civili, infissi, imbiancatura e rifacimento bagni. Qualità e professionalità al vostro servizio.">
-    <meta name="keywords" content="ristrutturazioni, infissi, finestre, imbiancatura, rifacimento bagno, edilizia civile">
+    <meta name="description"
+        content="Nome azienda - Esperti in ristrutturazioni civili, infissi, imbiancatura e rifacimento bagni. Qualità e professionalità al vostro servizio.">
+    <meta name="keywords"
+        content="ristrutturazioni, infissi, finestre, imbiancatura, rifacimento bagno, edilizia civile">
     <meta name="author" content="Nome azienda">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Nome azienda - Ristrutturazioni Civili">
-    <meta property="og:description" content="Esperti in ristrutturazioni civili, infissi, imbiancatura e rifacimento bagni.">
+    <meta property="og:description"
+        content="Esperti in ristrutturazioni civili, infissi, imbiancatura e rifacimento bagni.">
     <meta property="og:type" content="website">
-    
+
     <title>Nome azienda - Ristrutturazioni Civili</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#home" class="logo">Nome azienda</a>
-                
+
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                
+
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#infissi" class="nav-link">Infissi e Finestre</a></li>
-                    <li><a href="#imbiancatura" class="nav-link">Imbiancatura</a></li>
-                    <li><a href="#bagno" class="nav-link">Rifacimento Bagno</a></li>
                     <li><a href="#chisiamo" class="nav-link">Chi Siamo</a></li>
+                    <li class="dropdown">
+                        <button class="nav-link dropdown-toggle" id="serviziDropdown" aria-expanded="false">
+                            Servizi
+                            <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" id="serviziDropdownMenu">
+                            <li><a href="#imbiancature" class="dropdown-link">Imbiancature</a></li>
+                            <li><a href="#ristrutturazioni" class="dropdown-link">Ristrutturazioni</a></li>
+                            <li><a href="#bagni" class="dropdown-link">Bagni</a></li>
+                            <li><a href="#pavimenti" class="dropdown-link">Pavimenti</a></li>
+                            <li><a href="#porte" class="dropdown-link">Porte</a></li>
+                            <li><a href="#infissi" class="dropdown-link">Infissi</a></li>
+                            <li><a href="#inferriate" class="dropdown-link">Inferriate</a></li>
+                            <li><a href="#traslochi" class="dropdown-link">Traslochi</a></li>
+                            <li><a href="#zanzariere" class="dropdown-link">Zanzariere</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contatti" class="nav-link">Contatti</a></li>
                 </ul>
             </div>
@@ -66,71 +89,131 @@
             <div class="container">
                 <div class="intro-section">
                     <h2>Benvenuti in Nome azienda</h2>
-                    <p>Siamo specialisti nelle ristrutturazioni civili, offrendo servizi completi per trasformare la tua casa in uno spazio moderno, funzionale e accogliente. Con anni di esperienza nel settore, garantiamo qualità, professionalità e attenzione ai dettagli in ogni progetto.</p>
+                    <p>Siamo specialisti nelle ristrutturazioni civili, offrendo servizi completi per trasformare la tua
+                        casa in uno spazio moderno, funzionale e accogliente. Con anni di esperienza nel settore,
+                        garantiamo qualità, professionalità e attenzione ai dettagli in ogni progetto.</p>
                 </div>
 
                 <!-- Service Cards -->
                 <div class="services-grid">
                     <article class="service-card">
+                        <a href="#imbiancature" class="card-link">
+                            <div class="card-image">
+                                <img src="images/header-imbiancature.jpg" alt="Imbiancature professionali"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Imbiancature Professionali</h3>
+                                <p>Servizi di tinteggiatura professionale per dare nuova vita ai tuoi ambienti con
+                                    finiture impeccabili.</p>
+                                <span class="btn btn-primary">Scopri di più</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <a href="#ristrutturazioni" class="card-link">
+                            <div class="card-image">
+                                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni chiavi in mano"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Ristrutturazioni Chiavi in Mano</h3>
+                                <p>Ristrutturazioni complete dalla progettazione alla consegna, senza pensieri per te.
+                                </p>
+                                <span class="btn btn-primary">Scopri di più</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <a href="#bagni" class="card-link">
+                            <div class="card-image">
+                                <img src="images/header-bagni.jpg" alt="Rifacimento bagni" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Rifacimento Bagni</h3>
+                                <p>Ristrutturazione completa del bagno con design moderno e materiali di alta qualità.
+                                </p>
+                                <span class="btn btn-primary">Scopri di più</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <a href="#pavimenti" class="card-link">
+                            <div class="card-image">
+                                <img src="images/header-pavimenti.jpg" alt="Pavimenti in parquet e gres" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Pavimenti in Parquet e Gres</h3>
+                                <p>Installazione di pavimenti in parquet e gres porcellanato di alta qualità.</p>
+                                <span class="btn btn-primary">Scopri di più</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <a href="#porte" class="card-link">
+                            <div class="card-image">
+                                <img src="images/header-porte.jpg" alt="Porte interne e porte blindate" loading="lazy">
+                            </div>
+                            <div class="card-content">
+                                <h3>Porte Interne e Porte Blindate</h3>
+                                <p>Installazione di porte interne di design e porte blindate per la tua sicurezza.</p>
+                                <span class="btn btn-primary">Scopri di più</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="service-card">
                         <a href="#infissi" class="card-link">
                             <div class="card-image">
-                                <img src="images/header-infissi.jpg" alt="Infissi e finestre" loading="lazy">
+                                <img src="images/header-infissi.jpg" alt="Finestre e infissi" loading="lazy">
                             </div>
                             <div class="card-content">
-                                <h3>Infissi e Finestre</h3>
-                                <p>Installazione di infissi moderni ed efficienti per migliorare comfort e risparmio energetico della tua abitazione.</p>
+                                <h3>Finestre e Infissi</h3>
+                                <p>Installazione di infissi moderni ed efficienti per migliorare comfort e risparmio
+                                    energetico.</p>
                                 <span class="btn btn-primary">Scopri di più</span>
                             </div>
                         </a>
                     </article>
 
                     <article class="service-card">
-                        <a href="#imbiancatura" class="card-link">
+                        <a href="#inferriate" class="card-link">
                             <div class="card-image">
-                                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura professionale" loading="lazy">
+                                <img src="images/header-inferriate.jpg" alt="Inferriate di sicurezza" loading="lazy">
                             </div>
                             <div class="card-content">
-                                <h3>Imbiancatura</h3>
-                                <p>Servizi di tinteggiatura professionale per dare nuova vita ai tuoi ambienti con finiture impeccabili.</p>
+                                <h3>Inferriate di Sicurezza</h3>
+                                <p>Installazione di inferriate di sicurezza per proteggere la tua abitazione.</p>
                                 <span class="btn btn-primary">Scopri di più</span>
                             </div>
                         </a>
                     </article>
 
                     <article class="service-card">
-                        <a href="#bagno" class="card-link">
+                        <a href="#traslochi" class="card-link">
                             <div class="card-image">
-                                <img src="images/header-bagno.jpg" alt="Rifacimento bagno" loading="lazy">
+                                <img src="images/header-traslochi.jpg" alt="Servizio traslochi" loading="lazy">
                             </div>
                             <div class="card-content">
-                                <h3>Rifacimento Bagno</h3>
-                                <p>Ristrutturazione completa del bagno con design moderno e materiali di alta qualità.</p>
+                                <h3>Servizio Traslochi</h3>
+                                <p>Servizio traslochi professionale per spostare i tuoi mobili in sicurezza.</p>
                                 <span class="btn btn-primary">Scopri di più</span>
                             </div>
                         </a>
                     </article>
 
                     <article class="service-card">
-                        <a href="#chisiamo" class="card-link">
+                        <a href="#zanzariere" class="card-link">
                             <div class="card-image">
-                                <img src="images/header-chisiamo.jpg" alt="Il nostro team" loading="lazy">
+                                <img src="images/header-zanzariere.jpg" alt="Zanzariere" loading="lazy">
                             </div>
                             <div class="card-content">
-                                <h3>Chi Siamo</h3>
-                                <p>Scopri la nostra storia, i nostri valori e il team di professionisti che lavora per te.</p>
-                                <span class="btn btn-primary">Scopri di più</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="service-card">
-                        <a href="#contatti" class="card-link">
-                            <div class="card-image">
-                                <img src="images/header-contatti.jpg" alt="Contattaci" loading="lazy">
-                            </div>
-                            <div class="card-content">
-                                <h3>Contatti</h3>
-                                <p>Richiedi un preventivo gratuito o contattaci per maggiori informazioni sui nostri servizi.</p>
+                                <h3>Zanzariere</h3>
+                                <p>Installazione di zanzariere su misura per finestre e porte.</p>
                                 <span class="btn btn-primary">Scopri di più</span>
                             </div>
                         </a>
@@ -139,19 +222,328 @@
             </div>
         </section>
 
-        <!-- INFISSI E FINESTRE PAGE -->
-        <section id="infissi" class="page subpage">
+        <!-- IMBIANCATURE PROFESSIONALI PAGE -->
+        <section id="imbiancature" class="page subpage">
             <div class="page-header">
-                <img src="images/header-infissi.jpg" alt="Infissi e finestre moderne" loading="lazy">
+                <img src="images/header-imbiancature.jpg" alt="Imbiancature professionali" loading="lazy">
                 <div class="page-header-overlay"></div>
-                <h1 class="page-title">Infissi e Finestre</h1>
+                <h1 class="page-title">Imbiancature Professionali</h1>
             </div>
-            
+
             <div class="container">
                 <div class="page-content">
-                    <h2>Installazione Infissi di Qualità</h2>
-                    <p>Offriamo un servizio completo di installazione e sostituzione di infissi e finestre, utilizzando materiali di prima qualità come PVC, alluminio e legno. I nostri infissi garantiscono isolamento termico e acustico superiore, contribuendo al risparmio energetico e al comfort della tua abitazione.</p>
-                    <p>Ogni progetto viene personalizzato in base alle esigenze specifiche del cliente, con particolare attenzione all'estetica e alla funzionalità. Il nostro team di esperti ti guiderà nella scelta della soluzione più adatta al tuo immobile.</p>
+                    <h2>Tinteggiatura Professionale</h2>
+                    <p>I nostri servizi di imbiancatura includono la preparazione accurata delle superfici, la
+                        scelta di pitture di alta qualità e l'applicazione professionale per garantire un risultato
+                        duraturo e impeccabile. Lavoriamo con le migliori marche di vernici, offrendo un'ampia gamma
+                        di colori e finiture.</p>
+                    <p>Che si tratti di un appartamento, un ufficio o un'intera abitazione, il nostro team è in
+                        grado di gestire progetti di qualsiasi dimensione con precisione e cura dei dettagli.
+                        Utilizziamo tecniche moderne per minimizzare i tempi di esecuzione senza compromettere la
+                        qualità.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="imbiancature">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-imbiancature.jpg" alt="Imbiancature Professionali 1"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-imbiancature.jpg" alt="Imbiancature Professionali 2"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-imbiancature.jpg" alt="Imbiancature Professionali 3"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-imbiancature.jpg" alt="Imbiancature Professionali 4"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RISTRUTTURAZIONI CHIAVI IN MANO PAGE -->
+        <section id="ristrutturazioni" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni chiavi in mano" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Ristrutturazioni Chiavi in Mano</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Ristrutturazioni Complete</h2>
+                    <p>Offriamo un servizio completo di ristrutturazione chiavi in mano, dalla progettazione
+                        iniziale alla consegna finale. Ci occupiamo di tutti gli aspetti del progetto: demolizioni,
+                        murature, impianti elettrici e idraulici, pavimenti, rivestimenti e finiture.</p>
+                    <p>Il nostro approccio chiavi in mano ti libera da ogni preoccupazione, permettendoti di avere
+                        un unico interlocutore per l'intero progetto. Coordiniamo tutti i professionisti coinvolti e
+                        garantiamo il rispetto dei tempi e del budget concordati.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="ristrutturazioni">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni Chiavi in Mano 1"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni Chiavi in Mano 2"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni Chiavi in Mano 3"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-ristrutturazioni.jpg" alt="Ristrutturazioni Chiavi in Mano 4"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIFACIMENTO BAGNI PAGE -->
+        <section id="bagni" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-bagni.jpg" alt="Rifacimento bagni moderni" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Rifacimento Bagni</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Ristrutturazione Completa del Bagno</h2>
+                    <p>Trasformiamo il tuo bagno in uno spazio moderno, funzionale e di design. Ci occupiamo di ogni
+                        aspetto della ristrutturazione: dalla demolizione alla posa di nuove piastrelle,
+                        dall'installazione di sanitari e rubinetteria all'impianto idraulico ed elettrico.</p>
+                    <p>Lavoriamo con materiali di alta qualità e seguiamo le ultime tendenze del design, garantendo
+                        risultati che uniscono estetica e praticità. Il nostro obiettivo è creare bagni che
+                        rispecchino il tuo stile personale e migliorino la qualità della vita quotidiana.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="bagni">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-bagni.jpg" alt="Rifacimento Bagni 1" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-bagni.jpg" alt="Rifacimento Bagni 2" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-bagni.jpg" alt="Rifacimento Bagni 3" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-bagni.jpg" alt="Rifacimento Bagni 4" loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAVIMENTI IN PARQUET E GRES PAGE -->
+        <section id="pavimenti" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-pavimenti.jpg" alt="Pavimenti in parquet e gres" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Pavimenti in Parquet e Gres</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Installazione Pavimenti di Qualità</h2>
+                    <p>Offriamo un servizio completo di posa pavimenti in parquet e gres porcellanato. Il parquet
+                        dona calore e eleganza agli ambienti, mentre il gres porcellanato offre resistenza e
+                        facilità di manutenzione. Entrambe le soluzioni sono disponibili in un'ampia gamma di
+                        finiture e formati.</p>
+                    <p>Il nostro team di posatori esperti garantisce un lavoro preciso e accurato, con particolare
+                        attenzione ai dettagli e alle rifiniture. Utilizziamo solo materiali di prima qualità e
+                        tecniche di posa all'avanguardia per assicurare la massima durata nel tempo.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="pavimenti">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-pavimenti.jpg" alt="Pavimenti in Parquet e Gres 1"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-pavimenti.jpg" alt="Pavimenti in Parquet e Gres 2"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-pavimenti.jpg" alt="Pavimenti in Parquet e Gres 3"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-pavimenti.jpg" alt="Pavimenti in Parquet e Gres 4"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTE INTERNE E PORTE BLINDATE PAGE -->
+        <section id="porte" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-porte.jpg" alt="Porte interne e porte blindate" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Porte Interne e Porte Blindate</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Installazione Porte di Sicurezza e Design</h2>
+                    <p>Installiamo porte interne di design e porte blindate di sicurezza. Le nostre porte interne
+                        combinano estetica e funzionalità, disponibili in vari materiali, finiture e stili per
+                        adattarsi perfettamente al tuo arredamento.</p>
+                    <p>Per la sicurezza della tua abitazione, offriamo porte blindate certificate con elevati
+                        standard di protezione. Ogni porta viene installata con precisione da tecnici specializzati,
+                        garantendo perfetto funzionamento e massima sicurezza.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="porte">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-porte.jpg" alt="Porte Interne e Porte Blindate 1"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-porte.jpg" alt="Porte Interne e Porte Blindate 2"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-porte.jpg" alt="Porte Interne e Porte Blindate 3"
+                                    loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-porte.jpg" alt="Porte Interne e Porte Blindate 4"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINESTRE E INFISSI PAGE -->
+        <section id="infissi" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-infissi.jpg" alt="Finestre e infissi moderni" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Finestre e Infissi</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Installazione Infissi Moderni</h2>
+                    <p>Offriamo un servizio completo di installazione e sostituzione di infissi e finestre,
+                        utilizzando materiali di prima qualità come PVC, alluminio e legno. I nostri infissi
+                        garantiscono isolamento termico e acustico superiore, contribuendo al risparmio energetico e
+                        al comfort della tua abitazione.</p>
+                    <p>Ogni progetto viene personalizzato in base alle esigenze specifiche del cliente, con
+                        particolare attenzione all'estetica e alla funzionalità. Il nostro team di esperti ti
+                        guiderà nella scelta della soluzione più adatta al tuo immobile.</p>
                 </div>
 
                 <!-- Gallery -->
@@ -160,85 +552,238 @@
                     <div class="gallery" data-gallery="infissi">
                         <div class="gallery-slides">
                             <div class="gallery-slide active">
-                                <img src="images/header-infissi.jpg" alt="Infissi moderni 1" loading="lazy">
+                                <img src="images/header-infissi.jpg" alt="Finestre e Infissi 1" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-infissi.jpg" alt="Infissi moderni 2" loading="lazy">
+                                <img src="images/header-infissi.jpg" alt="Finestre e Infissi 2" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-infissi.jpg" alt="Infissi moderni 3" loading="lazy">
+                                <img src="images/header-infissi.jpg" alt="Finestre e Infissi 3" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-infissi.jpg" alt="Infissi moderni 4" loading="lazy">
+                                <img src="images/header-infissi.jpg" alt="Finestre e Infissi 4" loading="lazy">
                             </div>
                         </div>
-                        
+
                         <button class="gallery-control prev" aria-label="Immagine precedente">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
                         <button class="gallery-control next" aria-label="Immagine successiva">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </button>
-                        
+
                         <div class="gallery-dots"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- IMBIANCATURA PAGE -->
-        <section id="imbiancatura" class="page subpage">
+        <!-- INFERRIATE DI SICUREZZA PAGE -->
+        <section id="inferriate" class="page subpage">
             <div class="page-header">
-                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura professionale" loading="lazy">
+                <img src="images/header-inferriate.jpg" alt="Inferriate di sicurezza" loading="lazy">
                 <div class="page-header-overlay"></div>
-                <h1 class="page-title">Imbiancatura</h1>
+                <h1 class="page-title">Inferriate di Sicurezza</h1>
             </div>
-            
+
             <div class="container">
                 <div class="page-content">
-                    <h2>Tinteggiatura Professionale</h2>
-                    <p>I nostri servizi di imbiancatura includono la preparazione accurata delle superfici, la scelta di pitture di alta qualità e l'applicazione professionale per garantire un risultato duraturo e impeccabile. Lavoriamo con le migliori marche di vernici, offrendo un'ampia gamma di colori e finiture.</p>
-                    <p>Che si tratti di un appartamento, un ufficio o un'intera abitazione, il nostro team è in grado di gestire progetti di qualsiasi dimensione con precisione e cura dei dettagli. Utilizziamo tecniche moderne per minimizzare i tempi di esecuzione senza compromettere la qualità.</p>
+                    <h2>Protezione per la Tua Casa</h2>
+                    <p>Installiamo inferriate di sicurezza su misura per proteggere la tua abitazione. Le nostre
+                        inferriate combinano sicurezza e design, realizzate in ferro battuto o acciaio con finiture
+                        personalizzabili per integrarsi perfettamente con l'estetica del tuo edificio.</p>
+                    <p>Ogni inferriata viene progettata e installata secondo le normative di sicurezza vigenti,
+                        garantendo massima protezione senza compromettere l'aspetto estetico. Offriamo soluzioni
+                        fisse e rimovibili per ogni esigenza.</p>
                 </div>
 
                 <!-- Gallery -->
                 <div class="gallery-container">
                     <h3>I Nostri Lavori</h3>
-                    <div class="gallery" data-gallery="imbiancatura">
+                    <div class="gallery" data-gallery="inferriate">
                         <div class="gallery-slides">
                             <div class="gallery-slide active">
-                                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 1" loading="lazy">
+                                <img src="images/header-inferriate.jpg" alt="Inferriate di Sicurezza 1" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 2" loading="lazy">
+                                <img src="images/header-inferriate.jpg" alt="Inferriate di Sicurezza 2" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 3" loading="lazy">
+                                <img src="images/header-inferriate.jpg" alt="Inferriate di Sicurezza 3" loading="lazy">
                             </div>
                             <div class="gallery-slide">
-                                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 4" loading="lazy">
+                                <img src="images/header-inferriate.jpg" alt="Inferriate di Sicurezza 4" loading="lazy">
                             </div>
                         </div>
-                        
+
                         <button class="gallery-control prev" aria-label="Immagine precedente">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
                         <button class="gallery-control next" aria-label="Immagine successiva">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </button>
-                        
+
                         <div class="gallery-dots"></div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- SERVIZIO TRASLOCHI PAGE -->
+        <section id="traslochi" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-traslochi.jpg" alt="Servizio traslochi professionale" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Servizio Traslochi</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Traslochi Professionali</h2>
+                    <p>Offriamo un servizio traslochi completo e professionale per privati e aziende. Il nostro team
+                        esperto si occupa di ogni fase del trasloco: imballaggio, carico, trasporto e scarico dei
+                        tuoi beni con la massima cura e attenzione.</p>
+                    <p>Utilizziamo materiali di imballaggio di qualità e mezzi di trasporto adeguati per garantire
+                        la sicurezza dei tuoi mobili e oggetti. Offriamo anche servizi di smontaggio e rimontaggio
+                        mobili, oltre a soluzioni di deposito temporaneo.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="traslochi">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-traslochi.jpg" alt="Servizio Traslochi 1" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-traslochi.jpg" alt="Servizio Traslochi 2" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-traslochi.jpg" alt="Servizio Traslochi 3" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-traslochi.jpg" alt="Servizio Traslochi 4" loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ZANZARIERE PAGE -->
+        <section id="zanzariere" class="page subpage">
+            <div class="page-header">
+                <img src="images/header-zanzariere.jpg" alt="Zanzariere su misura" loading="lazy">
+                <div class="page-header-overlay"></div>
+                <h1 class="page-title">Zanzariere</h1>
+            </div>
+
+            <div class="container">
+                <div class="page-content">
+                    <h2>Installazione Zanzariere su Misura</h2>
+                    <p>Installiamo zanzariere su misura per finestre e porte, proteggendo la tua casa da insetti e
+                        zanzare senza rinunciare all'aria fresca. Offriamo diverse tipologie: zanzariere fisse, a
+                        rullo, plissettate e scorrevoli.</p>
+                    <p>Ogni zanzariera viene realizzata su misura per adattarsi perfettamente alle tue aperture.
+                        Utilizziamo materiali resistenti e duraturi, con reti di alta qualità che garantiscono lunga
+                        durata e facile manutenzione.</p>
+                </div>
+
+                <!-- Gallery -->
+                <div class="gallery-container">
+                    <h3>I Nostri Lavori</h3>
+                    <div class="gallery" data-gallery="zanzariere">
+                        <div class="gallery-slides">
+                            <div class="gallery-slide active">
+                                <img src="images/header-zanzariere.jpg" alt="Zanzariere 1" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-zanzariere.jpg" alt="Zanzariere 2" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-zanzariere.jpg" alt="Zanzariere 3" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/header-zanzariere.jpg" alt="Zanzariere 4" loading="lazy">
+                            </div>
+                        </div>
+
+                        <button class="gallery-control prev" aria-label="Immagine precedente">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="gallery-control next" aria-label="Immagine successiva">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="gallery-slides">
+            <div class="gallery-slide active">
+                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 1" loading="lazy">
+            </div>
+            <div class="gallery-slide">
+                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 2" loading="lazy">
+            </div>
+            <div class="gallery-slide">
+                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 3" loading="lazy">
+            </div>
+            <div class="gallery-slide">
+                <img src="images/header-imbiancatura.jpg" alt="Imbiancatura 4" loading="lazy">
+            </div>
+        </div>
+
+        <button class="gallery-control prev" aria-label="Immagine precedente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="gallery-control next" aria-label="Immagine successiva">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <div class="gallery-dots"></div>
+        </div>
+        </div>
+        </div>
         </section>
 
         <!-- RIFACIMENTO BAGNO PAGE -->
@@ -248,12 +793,16 @@
                 <div class="page-header-overlay"></div>
                 <h1 class="page-title">Rifacimento Bagno</h1>
             </div>
-            
+
             <div class="container">
                 <div class="page-content">
                     <h2>Ristrutturazione Completa del Bagno</h2>
-                    <p>Trasformiamo il tuo bagno in uno spazio moderno, funzionale e di design. Ci occupiamo di ogni aspetto della ristrutturazione: dalla demolizione alla posa di nuove piastrelle, dall'installazione di sanitari e rubinetteria all'impianto idraulico ed elettrico.</p>
-                    <p>Lavoriamo con materiali di alta qualità e seguiamo le ultime tendenze del design, garantendo risultati che uniscono estetica e praticità. Il nostro obiettivo è creare bagni che rispecchino il tuo stile personale e migliorino la qualità della vita quotidiana.</p>
+                    <p>Trasformiamo il tuo bagno in uno spazio moderno, funzionale e di design. Ci occupiamo di ogni
+                        aspetto della ristrutturazione: dalla demolizione alla posa di nuove piastrelle,
+                        dall'installazione di sanitari e rubinetteria all'impianto idraulico ed elettrico.</p>
+                    <p>Lavoriamo con materiali di alta qualità e seguiamo le ultime tendenze del design, garantendo
+                        risultati che uniscono estetica e praticità. Il nostro obiettivo è creare bagni che rispecchino
+                        il tuo stile personale e migliorino la qualità della vita quotidiana.</p>
                 </div>
 
                 <!-- Gallery -->
@@ -274,18 +823,20 @@
                                 <img src="images/header-bagno.jpg" alt="Bagno ristrutturato 4" loading="lazy">
                             </div>
                         </div>
-                        
+
                         <button class="gallery-control prev" aria-label="Immagine precedente">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
                         <button class="gallery-control next" aria-label="Immagine successiva">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </button>
-                        
+
                         <div class="gallery-dots"></div>
                     </div>
                 </div>
@@ -299,13 +850,20 @@
                 <div class="page-header-overlay"></div>
                 <h1 class="page-title">Chi Siamo</h1>
             </div>
-            
+
             <div class="container">
                 <div class="page-content">
                     <h2>La Nostra Storia</h2>
-                    <p>Nome azienda è un'azienda specializzata in ristrutturazioni civili con oltre 20 anni di esperienza nel settore. Nata dalla passione per l'edilizia e il design, la nostra società si è affermata nel territorio come punto di riferimento per qualità, affidabilità e professionalità.</p>
-                    <p>Il nostro team è composto da professionisti qualificati e certificati, costantemente aggiornati sulle ultime tecniche e normative del settore. Crediamo nel valore del lavoro ben fatto e nella soddisfazione del cliente come misura del nostro successo.</p>
-                    <p>Ogni progetto è per noi un'opportunità per dimostrare la nostra competenza e dedizione. Lavoriamo con trasparenza, rispettando tempi e budget concordati, e offriamo garanzie su tutti i nostri interventi.</p>
+                    <p>Nome azienda è un'azienda specializzata in ristrutturazioni civili con oltre 20 anni di
+                        esperienza nel settore. Nata dalla passione per l'edilizia e il design, la nostra società si è
+                        affermata nel territorio come punto di riferimento per qualità, affidabilità e professionalità.
+                    </p>
+                    <p>Il nostro team è composto da professionisti qualificati e certificati, costantemente aggiornati
+                        sulle ultime tecniche e normative del settore. Crediamo nel valore del lavoro ben fatto e nella
+                        soddisfazione del cliente come misura del nostro successo.</p>
+                    <p>Ogni progetto è per noi un'opportunità per dimostrare la nostra competenza e dedizione. Lavoriamo
+                        con trasparenza, rispettando tempi e budget concordati, e offriamo garanzie su tutti i nostri
+                        interventi.</p>
                 </div>
 
                 <!-- Gallery -->
@@ -326,18 +884,20 @@
                                 <img src="images/header-chisiamo.jpg" alt="Team 4" loading="lazy">
                             </div>
                         </div>
-                        
+
                         <button class="gallery-control prev" aria-label="Immagine precedente">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
                         <button class="gallery-control next" aria-label="Immagine successiva">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </button>
-                        
+
                         <div class="gallery-dots"></div>
                     </div>
                 </div>
@@ -351,11 +911,12 @@
                 <div class="page-header-overlay"></div>
                 <h1 class="page-title">Contatti</h1>
             </div>
-            
+
             <div class="container">
                 <div class="page-content">
                     <h2>Richiedi un Preventivo Gratuito</h2>
-                    <p>Siamo a tua disposizione per qualsiasi informazione o per fornirti un preventivo gratuito e senza impegno. Contattaci compilando il form sottostante o utilizzando i nostri recapiti.</p>
+                    <p>Siamo a tua disposizione per qualsiasi informazione o per fornirti un preventivo gratuito e senza
+                        impegno. Contattaci compilando il form sottostante o utilizzando i nostri recapiti.</p>
                 </div>
 
                 <div class="contact-wrapper">
@@ -365,17 +926,17 @@
                                 <label for="name">Nome e Cognome *</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="email">Email *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="phone">Telefono</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="service">Servizio di Interesse</label>
                                 <select id="service" name="service">
@@ -386,12 +947,12 @@
                                     <option value="altro">Altro</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="message">Messaggio *</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-primary btn-large">Invia Richiesta</button>
                         </form>
                     </div>
@@ -399,9 +960,10 @@
                     <div class="contact-info-section">
                         <div class="contact-info">
                             <h3>I Nostri Recapiti</h3>
-                            
+
                             <div class="info-item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
@@ -410,20 +972,26 @@
                                     <p>Via Example 123<br>00100 Roma, Italia</p>
                                 </div>
                             </div>
-                            
+
                             <div class="info-item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
                                 </svg>
                                 <div>
                                     <strong>Telefono</strong>
                                     <p>+39 012 345 6789</p>
                                 </div>
                             </div>
-                            
+
                             <div class="info-item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                                 <div>
@@ -431,9 +999,10 @@
                                     <p>info@nomeazienda.it</p>
                                 </div>
                             </div>
-                            
+
                             <div class="info-item">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
@@ -457,16 +1026,22 @@
                     <h4>Nome azienda</h4>
                     <p>Ristrutturazioni civili di qualità dal 2003</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Servizi</h4>
                     <ul>
-                        <li><a href="#infissi">Infissi e Finestre</a></li>
-                        <li><a href="#imbiancatura">Imbiancatura</a></li>
-                        <li><a href="#bagno">Rifacimento Bagno</a></li>
+                        <li><a href="#imbiancature">Imbiancature</a></li>
+                        <li><a href="#ristrutturazioni">Ristrutturazioni</a></li>
+                        <li><a href="#bagni">Rifacimento Bagni</a></li>
+                        <li><a href="#pavimenti">Pavimenti</a></li>
+                        <li><a href="#porte">Porte</a></li>
+                        <li><a href="#infissi">Infissi</a></li>
+                        <li><a href="#inferriate">Inferriate</a></li>
+                        <li><a href="#traslochi">Traslochi</a></li>
+                        <li><a href="#zanzariere">Zanzariere</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Azienda</h4>
                     <ul>
@@ -474,13 +1049,13 @@
                         <li><a href="#contatti">Contatti</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Contatti</h4>
                     <p>Tel: +39 012 345 6789<br>Email: info@nomeazienda.it</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Nome azienda. Tutti i diritti riservati.</p>
             </div>
@@ -489,4 +1064,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
