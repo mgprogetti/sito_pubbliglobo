@@ -220,6 +220,7 @@ button {
         position: static;
         padding: 0;
         box-shadow: none;
+        align-items: center;
     }
 
     .nav-menu.active {
@@ -250,7 +251,7 @@ button {
     border: none;
     cursor: pointer;
     font-size: inherit;
-    vertical-align: middle;
+    line-height: inherit;
 }
 
 .dropdown-toggle:hover {
@@ -259,6 +260,7 @@ button {
 
 .dropdown-icon {
     transition: transform var(--transition-fast);
+    margin-left: 4px;
 }
 
 .dropdown.active .dropdown-icon {
