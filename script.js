@@ -67,18 +67,18 @@ class Router {
 
     updateMetaTags(pageId) {
         const pageTitles = {
-            home: 'Nome azienda - Ristrutturazioni Civili',
-            imbiancature: 'Imbiancature Professionali - Nome azienda',
-            ristrutturazioni: 'Ristrutturazioni Chiavi in Mano - Nome azienda',
-            bagni: 'Rifacimento Bagni - Nome azienda',
-            pavimenti: 'Pavimenti in Parquet e Gres - Nome azienda',
-            porte: 'Porte Interne e Porte Blindate - Nome azienda',
-            infissi: 'Finestre e Infissi - Nome azienda',
-            inferriate: 'Inferriate di Sicurezza - Nome azienda',
-            traslochi: 'Servizio Traslochi - Nome azienda',
-            zanzariere: 'Zanzariere - Nome azienda',
-            chisiamo: 'Chi Siamo - Nome azienda',
-            contatti: 'Contatti - Nome azienda'
+            home: 'Pubbliglobo - Ristrutturazioni Civili',
+            imbiancature: 'Imbiancature Professionali - Pubbliglobo',
+            ristrutturazioni: 'Ristrutturazioni Chiavi in Mano - Pubbliglobo',
+            bagni: 'Rifacimento Bagni - Pubbliglobo',
+            pavimenti: 'Pavimenti in Parquet e Gres - Pubbliglobo',
+            porte: 'Porte Interne e Porte Blindate - Pubbliglobo',
+            infissi: 'Finestre e Infissi - Pubbliglobo',
+            inferriate: 'Inferriate di Sicurezza - Pubbliglobo',
+            traslochi: 'Servizio Traslochi - Pubbliglobo',
+            zanzariere: 'Zanzariere - Pubbliglobo',
+            chisiamo: 'Chi Siamo - Pubbliglobo',
+            contatti: 'Contatti - Pubbliglobo'
         };
 
         const pageDescriptions = {
