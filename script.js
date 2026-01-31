@@ -468,6 +468,237 @@ class NavbarScroll {
 }
 
 // ===================================
+// SERVICES DATA
+// ===================================
+
+const servicesData = [
+    {
+        id: 'imbiancature',
+        title: 'Imbiancature Professionali',
+        description: 'Servizi di tinteggiatura professionale per dare nuova vita ai tuoi ambienti con finiture impeccabili.',
+        image: 'images/header-imbiancature.jpg'
+    },
+    {
+        id: 'ristrutturazioni',
+        title: 'Ristrutturazioni Chiavi in Mano',
+        description: 'Ristrutturazioni complete dalla progettazione alla consegna, senza pensieri per te.',
+        image: 'images/header-ristrutturazioni.jpg'
+    },
+    {
+        id: 'bagni',
+        title: 'Rifacimento Bagni',
+        description: 'Ristrutturazione completa del bagno con design moderno e materiali di alta qualità.',
+        image: 'images/header-bagni.jpg'
+    },
+    {
+        id: 'pavimenti',
+        title: 'Pavimenti in Parquet e Gres',
+        description: 'Installazione di pavimenti in parquet e gres porcellanato di alta qualità.',
+        image: 'images/header-pavimenti.jpg'
+    },
+    {
+        id: 'porte',
+        title: 'Porte Interne e Blindate',
+        description: 'Installazione di porte interne di design e porte blindate per la tua sicurezza.',
+        image: 'images/header-porte.jpg'
+    },
+    {
+        id: 'infissi',
+        title: 'Finestre e Infissi',
+        description: 'Installazione di infissi moderni ed efficienti per migliorare comfort e risparmio energetico.',
+        image: 'images/header-infissi.jpg'
+    },
+    {
+        id: 'inferriate',
+        title: 'Inferriate di Sicurezza',
+        description: 'Installazione di inferriate di sicurezza per proteggere la tua abitazione.',
+        image: 'images/header-inferriate.jpg'
+    },
+    {
+        id: 'traslochi',
+        title: 'Servizio Traslochi',
+        description: 'Servizio traslochi professionale per spostare i tuoi mobili in sicurezza.',
+        image: 'images/header-traslochi.jpg'
+    },
+    {
+        id: 'zanzariere',
+        title: 'Zanzariere',
+        description: 'Installazione di zanzariere su misura per finestre e porte.',
+        image: 'images/header-zanzariere.jpg'
+    }
+];
+
+// ===================================
+// SERVICE CAROUSEL
+// ===================================
+
+class ServiceCarousel {
+    constructor(container, currentServiceId) {
+        this.container = container;
+        this.currentServiceId = currentServiceId;
+        this.items = servicesData.filter(service => service.id !== currentServiceId);
+        this.currentIndex = 0;
+        this.itemsPerView = 4;
+
+        this.init();
+    }
+
+    init() {
+        this.render();
+        this.setupCarousel();
+        this.setupResizeListener();
+    }
+
+    render() {
+        // Clear existing content (pills)
+        const pillsContainer = this.container.querySelector('.service-pills');
+        if (pillsContainer) {
+            pillsContainer.remove();
+        }
+
+        // Create carousel structure
+        const carouselWrapper = document.createElement('div');
+        carouselWrapper.className = 'service-carousel-wrapper';
+
+        carouselWrapper.innerHTML = `
+            <button class="service-carousel-btn prev" aria-label="Precedente" style="display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="service-carousel">
+                <div class="service-carousel-track">
+                    ${this.items.map(service => `
+                        <div class="service-carousel-item">
+                            <a href="#${service.id}" class="service-box">
+                                <div class="service-box-image">
+                                    <img src="${service.image}" alt="${service.title}" loading="lazy">
+                                </div>
+                                <div class="service-box-content">
+                                    <h4>${service.title}</h4>
+                                    <p>${service.description}</p>
+                                    <span class="service-btn-text">Scopri di più</span>
+                                </div>
+                            </a>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            <button class="service-carousel-btn next" aria-label="Successivo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        `;
+
+        this.container.appendChild(carouselWrapper);
+
+        this.track = carouselWrapper.querySelector('.service-carousel-track');
+        this.prevBtn = carouselWrapper.querySelector('.service-carousel-btn.prev');
+        this.nextBtn = carouselWrapper.querySelector('.service-carousel-btn.next');
+    }
+
+    setupCarousel() {
+        this.updateItemsPerView();
+        this.updateButtons();
+
+        this.prevBtn.addEventListener('click', () => {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+                this.updateTrack();
+            }
+        });
+
+        this.nextBtn.addEventListener('click', () => {
+            if (this.currentIndex < this.items.length - this.itemsPerView) {
+                this.currentIndex++;
+                this.updateTrack();
+            }
+        });
+    }
+
+    updateItemsPerView() {
+        const width = window.innerWidth;
+        if (width >= 1024) {
+            this.itemsPerView = 4;
+        } else if (width >= 640) {
+            this.itemsPerView = 2;
+        } else {
+            this.itemsPerView = 1;
+        }
+
+        // Ensure index is valid after resize
+        if (this.currentIndex > this.items.length - this.itemsPerView) {
+            this.currentIndex = Math.max(0, this.items.length - this.itemsPerView);
+            this.updateTrack();
+        }
+
+        this.updateButtons();
+    }
+
+    updateTrack() {
+        const itemWidth = 100 / this.itemsPerView;
+        // We need to account for gap in calculation if we want precise scroll, 
+        // but with flex gap property, percentage width might need adjustment or we use calc() in CSS.
+        // In CSS: width: calc(25% - gap * 3/4)
+
+        // Simpler approach: translate by percentage of container width
+        // The track width is implicitly defined by content.
+        // Let's translate by (100% / itemsPerView) * currentIndex + gap adjustment?
+
+        // Actually, since we set flex-basis in CSS, we can just translate by (itemWidth + gap) * index.
+        // But getting the exact pixel value including gap is safer.
+
+        const item = this.track.querySelector('.service-carousel-item');
+        if (!item) return;
+
+        const itemStyle = window.getComputedStyle(item);
+        const itemWidthPx = item.offsetWidth;
+        const gap = parseFloat(window.getComputedStyle(this.track).gap) || 0;
+
+        const moveAmount = (itemWidthPx + gap) * this.currentIndex;
+        this.track.style.transform = `translateX(-${moveAmount}px)`;
+
+        this.updateButtons();
+    }
+
+    updateButtons() {
+        this.prevBtn.style.display = 'flex'; // Enable flex
+        this.nextBtn.style.display = 'flex'; // Enable flex
+        this.prevBtn.disabled = this.currentIndex === 0;
+
+        // Special case: if total items <= visible items, hide controls or disable
+        if (this.items.length <= this.itemsPerView) {
+            this.nextBtn.disabled = true;
+            this.prevBtn.disabled = true;
+            // Optional: hide them
+            this.prevBtn.style.display = 'none';
+            this.nextBtn.style.display = 'none';
+        } else {
+            this.nextBtn.disabled = this.currentIndex >= this.items.length - this.itemsPerView;
+        }
+    }
+
+    setupResizeListener() {
+        window.addEventListener('resize', this.debounce(() => {
+            this.updateItemsPerView();
+        }, 200));
+    }
+
+    debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+}
+
+// ===================================
 // INITIALIZATION
 // ===================================
 
@@ -494,4 +725,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Navbar Scroll Effect
     new NavbarScroll();
+
+    // Initialize Service Carousels
+    document.querySelectorAll('.subpage .service-nav-container').forEach(container => {
+        // Find parent section id
+        const section = container.closest('section');
+        if (section && section.id) {
+            new ServiceCarousel(container, section.id);
+        }
+    });
 });
