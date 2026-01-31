@@ -351,9 +351,9 @@ button {
    =================================== */
 .hero {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
-    max-height: 600px;
+    height: 30vh;
+    min-height: 200px;
+    max-height: 300px;
     overflow: hidden;
 }
 
@@ -403,8 +403,8 @@ button {
 
 @media (min-width: 768px) {
     .hero {
-        height: 70vh;
-        max-height: 700px;
+        height: 35vh;
+        max-height: 350px;
     }
 
     .hero-title {
